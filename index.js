@@ -19,6 +19,18 @@ counter.innerText = count;
 
 const reset=()=>{
 count= 0;
-counter.innerHTML = "<mark>" + count + "</mark>"
+counter.innerHTML = "<mark>" + count + "</mark>";
+}
+
+const selectTheme = (theme)=> {
+    document.getElementsByTagName("body")[0].className = theme;
+    document.getElementsByTagName("main")[0].className = theme;
+
+
+    const buttons = document.getElementsByTagName('button');
+    for(let i=0; i<buttons.length; i++){
+        buttons[i].className = theme;
+    } 
+
 }
 
